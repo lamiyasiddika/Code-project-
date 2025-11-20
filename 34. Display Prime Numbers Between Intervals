@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int a,b,i,k;
+    scanf("%d %d",&a,&b);
+
+    for(i=a;i<=b;i++){
+        if(i<2) continue;
+        for(k=2;k*k<=i;k++)
+            if(i%k==0) break;
+        if(k*k>i) printf("%d ",i);
+    }
+
+    return 0;
+}
