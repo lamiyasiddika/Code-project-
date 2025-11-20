@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+double power(double base, int exp) {
+    if (exp == 0) return 1;
+    if (exp < 0) return 1.0 / power(base, -exp);
+    return base * power(base, exp - 1);
+}
+
+int main() {
+    double b; int e;
+    printf("base exp: ");
+    if(scanf("%lf %d",&b,&e)==2) printf("%.6g\n", power(b,e));
+    return 0;
+}
