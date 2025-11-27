@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char s[1000]; fgets(s,1000,stdin);
+    s[strcspn(s,"\n")] = 0;
+    int l=0, r=strlen(s)-1;
+    while(l<r){ if(s[l++]!=s[r--]){ printf("Not palindrome\n"); return 0; } }
+    printf("Palindrome\n"); return 0;
+}
