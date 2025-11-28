@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char s[1000]; fgets(s,1000,stdin); s[strcspn(s,"\n")]=0;
+    int idx; scanf("%d",&idx);
+    if(idx<0 || idx>= (int)strlen(s)) { printf("Index out of range\n"); return 0; }
+    printf("%d\n", (unsigned char)s[idx]); return 0;
+}
