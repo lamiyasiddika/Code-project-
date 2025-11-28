@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <ctype.h>
+int main(){
+    char s[2000]; fgets(s,2000,stdin);
+    int seen[26]={0};
+    for(int i=0;s[i];i++) if(isalpha((unsigned char)s[i])) seen[tolower(s[i])-'a']=1;
+    for(int i=0;i<26;i++) if(!seen[i]){ printf("Not pangram\n"); return 0; }
+    printf("Pangram\n"); return 0;
+}
