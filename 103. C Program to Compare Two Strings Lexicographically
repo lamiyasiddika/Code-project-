@@ -1,0 +1,5 @@
+#include <stdio.h>
+#include <string.h>
+int main(){ char a[1000], b[1000]; fgets(a,1000,stdin); fgets(b,1000,stdin);
+a[strcspn(a,"\n")]=0; b[strcspn(b,"\n")]=0;
+int r = strcmp(a,b); if(r==0) printf("Equal\n"); else if(r<0) printf("a < b\n"); else printf("a > b\n"); return 0; }
