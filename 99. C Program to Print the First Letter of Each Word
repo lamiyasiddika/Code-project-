@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <ctype.h>
+int main(){
+    char s[1000]; fgets(s,1000,stdin);
+    int n=strlen(s);
+    for(int i=0;i<n;i++){
+        if((i==0 || isspace((unsigned char)s[i-1])) && !isspace((unsigned char)s[i])) printf("%c", s[i]);
+    }
+    printf("\n"); return 0;
+}
