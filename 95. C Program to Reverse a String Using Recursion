@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <string.h>
+void rev(char *s, int i, int j){
+    if(i>=j) return;
+    char t=s[i]; s[i]=s[j]; s[j]=t;
+    rev(s,i+1,j-1);
+}
+int main(){ char s[1000]; fgets(s,1000,stdin); s[strcspn(s,"\n")]=0;
+    rev(s,0,strlen(s)-1); printf("%s\n", s); return 0;}
