@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char s1[2000], s2[1000];
+    fgets(s1,2000,stdin); fgets(s2,1000,stdin);
+    s1[strcspn(s1,"\n")]=0; s2[strcspn(s2,"\n")]=0;
+    int pos; scanf("%d",&pos);
+    int len1=strlen(s1), len2=strlen(s2);
+    if(pos<0) pos=0; if(pos>len1) pos=len1;
+    char res[3000];
+    strncpy(res, s1, pos); res[pos]=0;
+    strcat(res, s2); strcat(res, s1+pos);
+    printf("%s\n", res); return 0;
+}
