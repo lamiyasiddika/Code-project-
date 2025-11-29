@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct Arr{ int n; int data[]; };
+int main(){
+    int n=3; struct Arr *a = malloc(sizeof *a + n * sizeof(int));
+    a->n=n; for(int i=0;i<n;i++) a->data[i]=i+1;
+    for(int i=0;i<n;i++) printf("%d ", a->data[i]); putchar('\n'); free(a); return 0;
+}
