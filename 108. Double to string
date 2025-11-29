@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(){ double d = 2.718281828; char s[80]; sprintf(s, "%lf", d); puts(s); return 0; }
