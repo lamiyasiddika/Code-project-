@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(){ system("unzip -l archive.zip"); return 0; }
