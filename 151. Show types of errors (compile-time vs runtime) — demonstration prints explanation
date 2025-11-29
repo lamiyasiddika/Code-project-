@@ -1,0 +1,3 @@
+/* 151 Show types of errors (explanatory) */
+#include <stdio.h>
+int main(){ puts("Compile-time errors: syntax, type errors\nRuntime errors: divide by zero, segfault, resource errors"); return 0; }
