@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include <string.h>
+struct Student{ char name[30]; int id; int age; };
+int main(){
+    struct Student s[]={{"A",3,20},{"B",1,22},{"C",2,19}}; int n=3;
+    for(int i=0;i<n-1;i++) for(int j=i+1;j<n;j++) if(s[i].id > s[j].id){ struct Student t=s[i]; s[i]=s[j]; s[j]=t; }
+    for(int i=0;i<n;i++) printf("%s %d %d\n", s[i].name, s[i].id, s[i].age); return 0;
+}
