@@ -1,0 +1,7 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+    int r=10; for(int y=-r;y<=r;y++){ for(int x=-r;x<=r;x++){
+        if(fabs(sqrt(x*x+y*y)-r) < 0.8) putchar('*'); else putchar(' ');
+    } putchar('\n'); } return 0;
+}
