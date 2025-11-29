@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(){ long x = 123456789L; char s[30]; sprintf(s, "%ld", x); puts(s); return 0; }
