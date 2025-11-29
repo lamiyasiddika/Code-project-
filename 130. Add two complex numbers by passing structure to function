@@ -1,0 +1,4 @@
+#include <stdio.h>
+struct Complex{ double r,i; };
+struct Complex add(struct Complex a, struct Complex b){ return (struct Complex){a.r+b.r, a.i+b.i}; }
+int main(){ struct Complex x={1.0,2.0}, y={3.0,4.0}, s=add(x,y); printf("%.1f + %.1fi\n", s.r, s.i); return 0; }
