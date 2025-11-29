@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main(){
+    FILE *f = fopen(__FILE__,"r"); int c;
+    if(!f){ perror("open"); return 1; }
+    while((c=fgetc(f))!=EOF) putchar(c);
+    fclose(f); return 0;
+}
