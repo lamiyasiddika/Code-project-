@@ -1,0 +1,8 @@
+#include <stdio.h>
+struct Student{ char name[50]; int id; };
+int main(){
+    struct Student s={"Lamia",101};
+    FILE *f = fopen("stud.bin","wb"); fwrite(&s,sizeof s,1,f); fclose(f);
+    struct Student r; f=fopen("stud.bin","rb"); fread(&r,sizeof r,1,f); fclose(f);
+    printf("%s %d\n", r.name, r.id); return 0;
+}
