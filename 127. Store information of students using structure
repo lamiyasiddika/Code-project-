@@ -1,0 +1,6 @@
+#include <stdio.h>
+struct Student{ char name[50]; int id; float gpa; };
+int main(){
+    struct Student s={"Lamia", 101, 3.75f};
+    printf("%s %d %.2f\n", s.name, s.id, s.gpa); return 0;
+}
