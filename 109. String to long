@@ -1,0 +1,3 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){ char *s = "123456"; long v = strtol(s,NULL,10); printf("%ld\n", v); return 0; }
