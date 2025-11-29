@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(){ int n=7; char c = '0' + (n%10); printf("%c\n", c); return 0; }
