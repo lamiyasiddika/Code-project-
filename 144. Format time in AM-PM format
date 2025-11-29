@@ -1,0 +1,6 @@
+#include <time.h>
+#include <stdio.h>
+int main(){
+    time_t t = time(NULL); struct tm *tm = localtime(&t);
+    char s[100]; strftime(s,sizeof s, "%I:%M:%S %p", tm); puts(s); return 0;
+}
