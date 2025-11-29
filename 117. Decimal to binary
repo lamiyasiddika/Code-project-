@@ -1,0 +1,6 @@
+#include <stdio.h>
+void dec_to_bin(unsigned int n){
+    if(n>1) dec_to_bin(n>>1);
+    putchar((n&1)?'1':'0');
+}
+int main(){ unsigned int n=13; dec_to_bin(n); putchar('\n'); return 0; }
