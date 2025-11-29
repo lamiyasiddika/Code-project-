@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(){ float f = 3.14159f; char s[50]; sprintf(s, "%f", f); printf("%s\n", s); return 0; }
