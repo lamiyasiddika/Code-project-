@@ -1,0 +1,5 @@
+#include <stdio.h>
+#include <signal.h>
+#include <stdlib.h>
+void handler(int s){ printf("Signal %d caught\n", s); exit(1); }
+int main(){ signal(SIGSEGV, handler); int *p = NULL; *p = 5; return 0; }
