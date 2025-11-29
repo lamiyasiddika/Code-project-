@@ -1,0 +1,6 @@
+#include <stdio.h>
+int main(){
+    int a[]={3,7,2,9,4}, n=5; int *p=a; int max=*p;
+    for(int i=1;i<n;i++) if(*(p+i)>max) max=*(p+i);
+    printf("%d\n", max); return 0;
+}
