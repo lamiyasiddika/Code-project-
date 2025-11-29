@@ -1,0 +1,3 @@
+#include <stdio.h>
+#include <sys/stat.h>
+int main(){ if(chmod("file.txt", 0444)==0) puts("Read-only"); else perror("chmod"); return 0; }
