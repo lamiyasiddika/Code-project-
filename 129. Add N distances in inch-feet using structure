@@ -1,0 +1,10 @@
+#include <stdio.h>
+struct Dist{ int feet; float inch; };
+struct Dist add(struct Dist a, struct Dist b){
+    struct Dist r; r.inch=a.inch+b.inch; r.feet=a.feet+b.feet + (int)(r.inch/12); r.inch = fmod(r.inch,12);
+    return r;
+}
+int main(){
+    struct Dist a={5,8.5}, b={3,7.75}; struct Dist s=add(a,b);
+    printf("%d'%0.2f\"\n", s.feet, s.inch); return 0;
+}
