@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main(){
+    FILE *src=fopen("a.txt","rb"), *dst=fopen("b.txt","wb");
+    if(!src||!dst){ perror("open"); return 1; }
+    int c; while((c=fgetc(src))!=EOF) fputc(c,dst);
+    fclose(src); fclose(dst); return 0;
+}
