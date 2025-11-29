@@ -1,0 +1,3 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){ char*s="1A"; int v = (int)strtol(s,NULL,16); printf("%d\n", v); return 0; }
