@@ -1,0 +1,10 @@
+#include <time.h>
+#include <stdio.h>
+int main(){
+    time_t t = time(NULL); struct tm *tm = localtime(&t);
+    char buf[100];
+    strftime(buf,sizeof buf, "%Y-%m-%d", tm); puts(buf);
+    strftime(buf,sizeof buf, "%d/%m/%Y", tm); puts(buf);
+    strftime(buf,sizeof buf, "%A, %B %d, %Y", tm); puts(buf);
+    return 0;
+}
