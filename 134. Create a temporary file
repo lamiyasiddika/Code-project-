@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(){ FILE *f = tmpfile(); if(f){ fputs("temp\n",f); rewind(f); char s[20]; fgets(s,20,f); puts(s); fclose(f);} return 0; }
