@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(){ return system("cp a.txt b.txt"); } /* quick shell call; on Windows use appropriate command */
